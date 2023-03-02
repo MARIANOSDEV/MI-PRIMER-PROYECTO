@@ -1,0 +1,14 @@
+@mixin estilos_titulos ($color_letra, $fuente_letra) { 
+    color: $color_letra;
+    font-family: $fuente_letra;
+    
+    @if $color_letra == "titulo"{
+        color: red ;
+
+    }
+    @else if $color_letra == "subtitulo"{
+        color: rgba(215, 0, 0, 0.858) ;
+
+    }
+
+}

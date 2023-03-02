@@ -1,0 +1,243 @@
+#opcionesSociosSi
+{
+    display: none;
+}
+#opcionesSociosNo
+{
+    
+}
+
+.classSociosSiNo #opcionesSociosSi
+{
+    display: grid;
+}
+.classSociosSiNo #opcionesSociosNo
+{
+    display: none;
+}
+@media screen and (min-width:576px){
+.formularios{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "a1 a2";
+    place-self: center;
+    margin: 5px;   
+    div #fotoAsociate{
+        grid-area: a1;
+        display: grid;
+        place-content: center;
+        margin-left: 10%;
+        margin-top: 5%;
+        max-width: 80%;    
+    }
+    #formularioAsociate{
+        display: grid;
+        grid-area: a2;
+        gap: 5px;
+        place-self: center;
+        width: 95%;
+        color: red;
+    }
+    
+    .mainform--content{
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        font-size: calc(0.3em + 1.2vw);
+        font-weight: bold;
+    }
+    button#botonAsociarse{
+        cursor: pointer;
+        border: none;
+        padding: 10px 20px;
+        font-size: calc(0.5em + 1vw);
+        font-weight: bold;
+        color: red;
+        position: relative;
+        border-radius: 12px;
+        margin:10px;
+    }
+    button#botonAsociarse::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            45deg,
+            red, rgb(210, 105, 0), rgb(223, 0, 63), rgb(172, 0, 0),
+            red, rgb(210, 105, 0), rgb(223, 0, 63), rgb(172, 0, 0));
+        background-size: 800%;
+        border-radius: 10px;
+        filter: blur(8px);
+        -webkit-animation: glowing 20s linear infinite;
+                animation: glowing 20s linear infinite;
+    }
+    
+}}
+@media screen and (max-width:576px){
+    tr{
+        display: flex;
+        th{
+            padding: 0 !important;
+        }
+    }
+    .formularios{
+        place-self: center;
+        margin: 5px;   
+        div #fotoAsociate{
+            grid-area: a1;
+            display: grid;
+            place-content: center;
+            margin-left: 10%;
+            margin-top: 5%;
+            max-width: 80%;
+        }
+        #formularioAsociate{
+            display: grid;
+            grid-area: a2;
+            place-self: center;
+            width: 95%;
+            color: red;
+        }
+        .mainform--content{
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            font-size: calc(.8em + 1.2vw);
+            font-weight: bold;
+        }
+    }}
+
+.mainform--content--abonar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    margin: 5px;
+    font-size: calc(1.1em + 0.7vw);
+    font-weight: bold;
+    }
+.inputShort{
+    max-width: 3em;
+}
+
+.container{
+    color: red !important;
+}
+#opcionesSocios
+{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-areas: "a1 a2 a3";
+    margin-top: 10px;
+    gap: 10px;
+}
+#consultaSocios{
+    display: flex;
+    justify-content: space-evenly;
+    grid-area: a2;
+    font-size: calc(1em + 1.4vw);
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+}
+#climas{
+    display: grid;
+    grid-area: a3;
+}
+.btn-danger{
+    background-color: red !important;
+}
+
+#buscadorSociosYpagos {
+    background-color: white !important;
+  }
+#barraBuscadorSocios{
+    padding: 20px !important;
+    gap: 10px;
+}
+#botonesPadron{
+    margin-left: 60%;
+    font-size: calc(0.2em + 1vw);
+}
+#botonesPagos{
+    margin-left: 30%;
+    font-size: calc(0.2em + 1vw);
+}
+
+th{
+    text-align: center;
+    justify-content: center;
+}
+td{
+    text-align: center;
+}
+.btn-close{
+    text-align: center !important;
+    
+}
+#cierreAnimado{
+    display: flex;
+    flex-direction: column;
+    width: 2.2rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    gap:.65rem;
+}
+#cierreAnimado>div{
+    background: red;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+#cierreAnimado:hover div:first-child{
+    transform: rotate(45deg);
+}
+#cierreAnimado:hover div:nth-child(2){
+    opacity: 0;
+}
+#cierreAnimado:hover div:last-child{
+    transform: rotate(-45deg);
+}
+#formPago{
+    background-image: url(../multimedia/fondohistoria.jpg);
+    background-size: calc(4em + 10vw);
+    background-repeat: no-repeat;
+}
+#modalAbonar{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    margin: 5px;
+    font-size: calc(0.95em + .5vw);
+    font-weight: bold;
+}
+#indicaCuotaValor p{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    text-align: right;
+}
+.inactivo{
+    color: red;
+}
+.clima{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 1em;
+    font-weight: bold;
+}
+
+
+
+
+

@@ -1,0 +1,189 @@
+@media screen and (max-width:576px)
+{    
+    .MainTit
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        padding: 10px;
+
+        #disciplinas
+        {
+            display: flex;
+            padding-left: 10px;
+            padding-top: 10px;
+            @include estilos_titulos ("titulo", Verdana);
+            font-size: 6vw;
+            width: 100%;
+            align-items: center;
+            justify-content: center; 
+
+        }
+        #MainTit--importantes
+            {
+                display: flex;
+                width: 100%; 
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            
+            img
+            {
+                margin: 10px;
+                width: 60VW;
+                height: AUTO;
+            }
+    }
+    .subMain-disciplina
+    {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 1em;
+        justify-content: center;
+        align-items: center;
+            
+            .sublistado
+            {
+                position: relative;
+                margin: 20px;
+            }
+           
+            .sublistado-titulo
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: rgba(90,0,10,0.4);
+                color: white;
+                font-size: 2em;
+                font-weight: bold;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0.5;
+            }
+
+            .sublistado-image
+            {
+                line-height: 0;
+                img {
+                width: 60VW;
+                height: AUTO;
+                }
+
+    }
+}
+            h2
+            {
+                @include estilos_titulos ("subtitulo", Tahoma,);
+                font-size: calc(5vw);
+            }
+            h3
+            {
+                @include estilos_titulos ("subtitulo", Tahoma,);
+                font-size: calc(3vw);
+            }
+}
+
+
+
+@media screen and (min-width:576px)
+{ 
+
+.MainTit
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;    
+    align-content: center;
+    justify-content: space-around;
+    #disciplinas
+        {
+            display: flex;
+            padding-left: 1rem;
+            padding-top: 1rem;
+            color: $color-principal;
+            font-size: calc(4vw);
+            font-weight: bold;
+            width: 100%;
+            align-items: center;
+            justify-content: left; 
+        }
+    #MainTit--importantes
+        {
+            display: flex;
+            width: 45%;
+            height: 100%;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+        }
+    
+    }
+    .subMain-disciplina
+    {
+        display: flex;
+        flex-direction: row;
+        grid-gap: 1em;
+        justify-content: center;
+        align-items: center;
+            
+            .sublistado
+            {
+                position: relative;
+                margin: 20px;
+            }
+           
+            .sublistado-titulo
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: rgba(90,0,10,0.4);
+                color: white;
+                font-size: 1.2em;
+                font-weight: bold;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity .5s;
+            }
+            .sublistado:hover .sublistado-titulo
+            {
+                opacity: 1;
+            }
+            .sublistado-image
+            {
+                line-height: 0;
+                img
+                {
+                width: 100%;
+                height: auto;
+                }
+            }
+
+    }
+    h2
+        {
+            color: $color-principal;
+            font-size: calc(3vw);
+            padding-top: 20px;
+        }
+    h3 
+        {
+            color: $color-principal;
+            font-size: calc(1.8vw);
+        }
+}

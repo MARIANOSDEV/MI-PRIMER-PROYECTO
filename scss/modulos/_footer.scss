@@ -1,0 +1,66 @@
+footer
+{
+    width: 100%;
+    max-height: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-small;
+    text-align: center;
+    margin-top: auto;
+}
+footer p
+{
+    color: white;
+    background-color: $color-principal;
+    margin-bottom: 0;
+}
+.myfoot
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $color-principal;
+    padding-left: 5px;
+    font-size: 1vw;
+}
+.buttons
+{
+    min-width: 85vw;
+    display: flex;
+    justify-content: right;
+    background-color: $color-principal;
+}
+  
+.buttons a
+{
+    text-decoration: none;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin: 2.5px;
+    text-align: center;
+    background: #314652;
+    color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+  
+}
+  
+.buttons a:hover
+{
+    transform: scale(1.2);
+}
+@media  screen and (max-width: 600px)
+{
+    .myfoot
+{
+    font-size: 3vw;
+}
+    .buttons
+{
+    min-width: 50vw;
+}
+}
+

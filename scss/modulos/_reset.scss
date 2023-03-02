@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: darkgrey RED;
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: RED;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 20px;
+  border: 1px solid darkgrey;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(255, 249, 249, 0.81);
+}
+
+.row{
+  --bs-gutter-x: 0 !important;
+}
+
+
+.navbar {
+  background-color: $color-principal !important;
+}
+
+Input {
+  border: 1px solid grey !important;
+  border-radius: 12px !important;
+  transition: all .3s !important;
+}
+
+Input:Focus {
+  Background-color: rgba(255, 183, 183, 0.277) !important;
+  border: 1px solid red !important;
+  outline: none !important;
+  border-radius: 5px !important;
+  transform: scale(1.01) in !important;
+  box-shadow: 2px 2px 5px rgba(255, 1, 1, 0.416) !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+body.swal2-shown>[aria-hidden="true"] {
+  transition: 0.1s filter;
+  filter: blur(10px);
+}
